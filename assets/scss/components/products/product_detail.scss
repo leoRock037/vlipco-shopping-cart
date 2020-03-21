@@ -20,6 +20,14 @@ h2 {
   }
 }
 
+p {
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
 .product-numbers {
   justify-content: space-between;
   margin-bottom: 24px;

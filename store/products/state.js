@@ -1,3 +1,4 @@
-export const state = () => ({
-  products: []
+export default () => ({
+  products: [],
+  selectedProduct: null
 })
