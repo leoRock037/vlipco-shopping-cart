@@ -1,0 +1,27 @@
+// =============================================================================
+// BUTTONS
+// =============================================================================
+
+button {
+  background-color: $primary-yellow;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 8px 16px;
+  color: $dark-gray;
+  appearance: none;
+  font-weight: 500;
+  transition: 0.3s;
+  box-shadow: none;
+  cursor: pointer;
+  display: flex;
+  border: none;
+
+  &:hover {
+    background-color: darken($primary-yellow, 10%)
+  }
+
+  i {
+    font-family: "vlipco-font";
+  }
+}

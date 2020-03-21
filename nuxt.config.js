@@ -12,7 +12,9 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap' },
+      { rel: 'stylesheet', href: 'https://file.myfontastic.com/kB2PWf6SEmgSfVDHXVHN6Y/icons.css' }
     ]
   },
   /*
@@ -23,7 +25,20 @@ export default {
   ** Global CSS
   */
   css: [
+    '@assets/css/normalize.css',
+    '@/assets/scss/main.scss',
+    '@/assets/scss/_counter.scss'
   ],
+  styleResources: {
+    scss: [
+      '~/assets/scss/_variables.scss',
+      '~/assets/scss/_grid.scss',
+      '~/assets/scss/_titles.scss',
+      '~/assets/scss/_breakpoints.scss',
+      '~/assets/scss/_boxes.scss',
+      '~/assets/scss/layout/wrapper.scss'
+    ]
+  },
   /*
   ** Plugins to load before mounting the App
   */
@@ -43,7 +58,8 @@ export default {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources'
   ],
   /*
   ** Axios module configuration

@@ -1,0 +1,25 @@
+// =============================================================================
+// PRODUCT ITEM COMPONENT
+// =============================================================================
+
+.product-item {
+  box-shadow: 0 2px 8px 0 rgba(38,40,60,0.08);
+  background-color: #FFFFFF;
+  position: relative;
+  border-radius: 4px;
+  padding: 16px;
+
+  max-width: 112px;
+
+  .conter {
+    font-size: 0.6875rem;
+    height: 29px;
+    width: 29px;
+    right: 5px;
+    top: 5px;
+  }
+
+  &.selected {
+    border: 1px solid $primary-yellow;
+  }
+}

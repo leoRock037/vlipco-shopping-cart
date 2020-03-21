@@ -1,0 +1,22 @@
+// =============================================================================
+// Navbar
+// =============================================================================
+
+nav {
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  display: flex;
+
+  @media (min-width: $breakpoint-medium) {
+    justify-content: space-between;
+    padding: 30px 64px;
+  }
+
+  button {
+    @media (max-width: $breakpoint-medium) {
+      display: none;
+    }
+  }
+}

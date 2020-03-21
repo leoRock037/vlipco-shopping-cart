@@ -1,0 +1,38 @@
+// =============================================================================
+// PRODUCT DETAIL COMPONENT
+// =============================================================================
+
+.product-detail {
+  position: relative;
+}
+
+img {
+  margin: 0 auto 50px;
+  max-width: 180px;
+  display: block;
+}
+
+h2 {
+  margin-bottom: 20px;
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: 1.25rem;
+  }
+}
+
+.product-numbers {
+  justify-content: space-between;
+  margin-bottom: 24px;
+  align-items: center;
+  display: flex;
+}
+
+.price {
+  color: $primary-blue;
+  font-weight: 500;
+}
+
+.counter {
+  right: -8px;
+  top: -16px;
+}

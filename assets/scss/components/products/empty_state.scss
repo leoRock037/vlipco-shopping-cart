@@ -1,0 +1,16 @@
+// =============================================================================
+// EMPTY STATE COMPONENT
+// =============================================================================
+
+img {
+  margin: 0 auto 50px;
+  display: block;
+}
+
+p {
+  font-weight: 500;
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: 1.25rem;
+  }
+}

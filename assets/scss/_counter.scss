@@ -1,0 +1,16 @@
+// =============================================================================
+// COUNTER
+// =============================================================================
+
+.counter {
+  background-color: $primary-blue;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  position: absolute;
+  font-size: 0.75rem;
+  display: flex;
+  color: #fff;
+  height: 32px;
+  width: 32px;
+}

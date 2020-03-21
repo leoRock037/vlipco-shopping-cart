@@ -1,0 +1,43 @@
+// =============================================================================
+// SHOPPING CART MODAL COMPONENT
+// =============================================================================
+
+// OVERLAY
+.modal-overlay {
+  background-color:rgba(38,40,60,0.72);
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+
+  // open
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+
+  .modal-wrapper {
+    background-color: #ffffff;
+    position: fixed;
+    padding: 24px;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+
+
+    @media (min-width: $breakpoint-medium) {
+      border-radius: 4px 0 0 4px;
+      width: 400px;
+      left: auto;
+      right: 0;
+    }
+  }
+}
