@@ -1,0 +1,37 @@
+// =============================================================================
+// INCREMENT
+// =============================================================================
+
+div {
+  border: 1px solid $light-gray;
+  background-color: #FFFFFF;
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+
+  i {
+    color: $primary-blue;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 10px;
+
+    &.fa-minus {
+      border-right: 1px solid $light-gray;
+    }
+
+    &.fa-plus {
+      border-left: 1px solid $light-gray;
+    }
+
+    &:hover {
+      color: darken($primary-blue, 10%);
+      background-color: $light-gray;
+    }
+  }
+
+  span {
+    line-height: normal;
+    padding: 5px 10px;
+    font-weight: 500;
+  }
+}

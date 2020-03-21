@@ -14,7 +14,7 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap' },
-      { rel: 'stylesheet', href: 'https://file.myfontastic.com/kB2PWf6SEmgSfVDHXVHN6Y/icons.css' }
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.12.1/css/all.css' }
     ]
   },
   /*

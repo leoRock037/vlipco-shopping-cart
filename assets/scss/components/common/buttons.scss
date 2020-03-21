@@ -6,6 +6,7 @@ button {
   background-color: $primary-yellow;
   justify-content: center;
   align-items: center;
+  line-height: normal;
   border-radius: 4px;
   padding: 8px 16px;
   color: $dark-gray;
@@ -22,7 +23,8 @@ button {
   }
 
   i {
-    font-family: "vlipco-font";
+    line-height: normal;
+    margin-right: 10px;
   }
 
   &.btn-block {

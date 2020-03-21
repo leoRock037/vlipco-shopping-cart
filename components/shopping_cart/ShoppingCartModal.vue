@@ -1,6 +1,6 @@
 <template>
-  <div v-if="openCart" class="modal-overlay">
-    <div ref="modalContent" class="modal-wrapper">
+  <div class="modal-overlay">
+    <div class="modal-wrapper">
       <img
         class="close"
         src="~/assets/images/btn_close.svg"
@@ -46,8 +46,7 @@ export default {
     }
   },
   computed: mapGetters({
-    products: 'products/products',
-    openCart: 'shopping_cart/open'
+    products: 'products/products'
   }),
   mounted () {
     document.body.classList.add('no-scroll')

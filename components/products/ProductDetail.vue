@@ -6,10 +6,11 @@
       <img :src="product.photo_url" alt="empty">
       <h2>{{ product.name }}</h2>
       <div class="product-numbers">
-        <span class="price">{{ product.price }}</span>
-        incrementComponent
+        <span class="price">$ {{ totalProduct }}</span>
+        <Increment :value="product.quantity" />
       </div>
       <p>{{ product.description }}</p>
+      <Button class="btn-block" text="Add product to cart" @click.native="addToCart()" />
     </div>
 
     <!-- empty state -->
@@ -19,11 +20,15 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import Button from '@/components/common/Button.vue'
+import Increment from '@/components/common/Increment.vue'
 import EmptyState from '@/components/products/EmptyState.vue'
 
 export default {
   name: 'ProductDetail',
   components: {
+    Button,
+    Increment,
     EmptyState
   },
   data () {
@@ -31,9 +36,17 @@ export default {
       anyProduct: true
     }
   },
-  computed: mapGetters({
-    product: 'products/selectedProduct'
-  })
+  computed: {
+    ...mapGetters({
+      product: 'products/selectedProduct'
+    }),
+    totalProduct () {
+      return this.product.quantity > 0
+        ? this.product.price * this.product.quantity
+        : this.product.price
+    }
+
+  }
 }
 </script>
 

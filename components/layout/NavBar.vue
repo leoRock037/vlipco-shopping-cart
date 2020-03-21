@@ -1,7 +1,11 @@
 <template>
   <nav>
     <img src="~/assets/images/logo_store.svg" alt="logo">
-    <Button text="$0" icon="icon-cart" @click.native="openCart()" />
+    <Button
+      text="$0"
+      icon="fas fa-shopping-cart"
+      @click.native="openCart()"
+    />
   </nav>
 </template>
 
