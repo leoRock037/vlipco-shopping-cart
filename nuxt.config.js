@@ -33,6 +33,7 @@ export default {
     scss: [
       '~/assets/scss/_variables.scss',
       '~/assets/scss/_grid.scss',
+      '~/assets/scss/_mixins.scss',
       '~/assets/scss/_titles.scss',
       '~/assets/scss/_breakpoints.scss',
       '~/assets/scss/_boxes.scss',

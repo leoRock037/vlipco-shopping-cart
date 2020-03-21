@@ -2,6 +2,10 @@
 // MAIN STYLES
 // =============================================================================
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   font-family: 'Roboto', sans-serif, Arial, Helvetica, sans-serif;

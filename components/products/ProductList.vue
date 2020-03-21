@@ -23,7 +23,6 @@ export default {
       }
     }
   },
-
   computed: mapGetters({
     products: 'products/products'
   })

@@ -1,0 +1,18 @@
+// =============================================================================
+// MIXINS
+// =============================================================================
+
+
+// Scroll Bar
+@mixin scroll-bar($bg-color, $bar-color, $width: 5px) {
+  &::-webkit-scrollbar {
+    background-color: $bg-color;
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 1px solid $bar-color;
+    background-color: $bar-color;
+    border-radius: 10px;
+  }
+}
