@@ -1,6 +1,5 @@
 # vlipco-shopping-cart
-
-> My sublime Nuxt.js project
+![alt shopping_cart](http://tight-trousers.surge.sh/logo_store.svg)
 
 ## Build Setup
 
@@ -19,4 +18,11 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+``` bash
+# deploy with surge
+$ yarn generate
+$ surge dist/
+```
+
+Surge link:
+[http://tight-trousers.surge.sh](http://tight-trousers.surge.sh)
