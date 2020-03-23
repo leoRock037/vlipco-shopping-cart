@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1>Our Products</h1>
-    <div v-for="(product, index) in products" :key="index">
-      <ProductItem :product="product" />
+    <div class="product-list">
+      <ProductItem v-for="(product, index) in products" :key="index" :product="product" />
     </div>
   </div>
 </template>

@@ -45,34 +45,11 @@
     }
   }
 
-  h2 {
+  h1 {
     margin-bottom: 30px;
   }
 
-  .product-list {
-    @include scroll-bar(#fff, $dark-gray);
-    border-bottom: 2px solid #E8E9F2;
-    margin-bottom: 20px;
-    overflow-y: scroll;
-    max-height: 260px;
-
-    img {
-      width: 60px;
-    }
-
-    li {
-      padding: 15px 0;
-      display: flex;
-    }
-
-    li + li {
-      border-top: 1px solid $light-gray;
-    }
-  }
-
-  .total {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
+  /deep/ .waybox-button {
+    width: 100%;
   }
 }

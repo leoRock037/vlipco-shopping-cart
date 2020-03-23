@@ -1,0 +1,36 @@
+.product-list {
+  @include scroll-bar(#fff, $dark-gray);
+  border-bottom: 2px solid #E8E9F2;
+  margin-bottom: 20px;
+  overflow-y: scroll;
+  max-height: 260px;
+
+  img {
+    width: 60px;
+  }
+
+  li {
+    align-items: center;
+    padding: 15px 0;
+    display: flex;
+  }
+
+  li + li {
+    border-top: 1px solid $light-gray;
+  }
+
+  span.counter {
+    margin-right: 10px;
+  }
+}
+
+.total {
+  justify-content: space-between;
+  padding: 0px 10px 20px;
+  align-items: center;
+  display: flex;
+
+  p {
+    font-weight: 500;
+  }
+}

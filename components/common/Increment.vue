@@ -18,9 +18,17 @@ export default {
   methods: {
     increment () {
       this.$store.commit('products/incrementProductQuantity')
+      this.update()
     },
     decrease () {
-      this.$store.commit('products/decreaseProductQuantity')
+      if (this.value > 0) {
+        this.$store.commit('products/decreaseProductQuantity')
+        this.update()
+      }
+    },
+    update () {
+      this.$store.commit('shopping_cart/count')
+      this.$emit('add-to-cart')
     }
   }
 }

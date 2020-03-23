@@ -8,13 +8,15 @@
 
 img {
   margin: 0 auto 40px;
-  max-width: 130px;
+  max-width: 80px;
   display: block;
+
+  @media (min-width: $breakpoint-medium) {
+    max-width: 130px;
+  }
 }
 
 h2 {
-  margin-bottom: 20px;
-
   @media (min-width: $breakpoint-medium) {
     font-size: 1.25rem;
   }
@@ -26,6 +28,7 @@ p {
   -webkit-line-clamp: 6;
   display: -webkit-box;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .product-numbers {

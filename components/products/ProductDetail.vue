@@ -6,11 +6,10 @@
       <img :src="product.photo_url" alt="empty">
       <h2>{{ product.name }}</h2>
       <div class="product-numbers">
-        <span class="price">$ {{ totalProduct }}</span>
-        <Increment :value="product.quantity" />
+        <span class="price">$ {{ priceToshow }}</span>
+        <Increment :value="product.quantity" @add-to-cart="addToCart()" />
       </div>
       <p>{{ product.description }}</p>
-      <Button class="btn-block" text="Add product to cart" @click.native="addToCart()" />
     </div>
 
     <!-- empty state -->
@@ -20,14 +19,13 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Button from '@/components/common/Button.vue'
+
 import Increment from '@/components/common/Increment.vue'
 import EmptyState from '@/components/products/EmptyState.vue'
 
 export default {
   name: 'ProductDetail',
   components: {
-    Button,
     Increment,
     EmptyState
   },
@@ -40,12 +38,28 @@ export default {
     ...mapGetters({
       product: 'products/selectedProduct'
     }),
-    totalProduct () {
-      return this.product.quantity > 0
-        ? this.product.price * this.product.quantity
-        : this.product.price
+    priceToshow () {
+      return this.product.amount === 0
+        ? this.product.price
+        : this.product.amount
     }
+  },
+  methods: {
+    addToCart () {
+      const shoppingCartJson = localStorage.getItem('shopping_cart')
+      const productsList = shoppingCartJson ? JSON.parse(shoppingCartJson) : []
 
+      if (productsList.some(product => product.id === this.product.id)) {
+        const index = productsList.findIndex(product => product.id === this.product.id)
+        this.product.quantity > 0
+          ? productsList.splice(index, 1, this.product)
+          : productsList.splice(index, 1)
+      } else {
+        productsList.push(this.product)
+      }
+
+      localStorage.setItem('shopping_cart', JSON.stringify(productsList))
+    }
   }
 }
 </script>

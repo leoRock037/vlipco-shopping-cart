@@ -10,7 +10,7 @@ export default {
   name: 'Button',
   props: {
     text: {
-      type: String,
+      type: [String, Number],
       required: true
     },
     icon: String

@@ -6,12 +6,17 @@
   box-shadow: 0 2px 8px 0 rgba(38,40,60,0.08);
   background-color: #FFFFFF;
   position: relative;
+  margin-right: 20px;
   border-radius: 4px;
+  max-width: 112px;
+  min-width: 112px;
   transition: 1s;
   cursor: pointer;
   padding: 16px;
 
-  max-width: 112px;
+  @media (min-width: $breakpoint-medium) {
+    margin: 0;
+  }
 
   .counter {
     font-size: 0.6875rem;

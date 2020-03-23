@@ -19,4 +19,30 @@ nav {
       display: none;
     }
   }
+
+  .mobile-button-cart {
+    background-color: $primary-yellow;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    padding: 16px;
+    width: 100%;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    i {
+      margin-right: 8px;
+    }
+
+    span:nth-child(2) {
+      font-weight: 500;
+    }
+
+    @media (min-width: $breakpoint-medium) {
+      display: none;
+    }
+  }
 }

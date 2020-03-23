@@ -7,24 +7,9 @@
         alt="close"
         @click="closeCart()"
       >
-      <h2>Shopping cart</h2>
-
+      <h1>Shopping cart</h1>
       <!-- shopping cart items -->
-      <div v-if="cartProducts">
-        <ul class="product-list">
-          <li v-for="(product, index) in products" :key="index">
-            <img :src="product.photo_url" alt="empty">
-            <div>
-              <h3>{{ product.name }}</h3>
-              <span class="counter">{{ product.quantity }}</span>
-            </div>
-          </li>
-        </ul>
-        <div class="total">
-          <h4>Total</h4>
-          <p>$2000</p>
-        </div>
-      </div>
+      <ShoppingCartData v-if="productsOnCart" :key="count" />
       <!-- Empty shopping cart -->
       <EmptyCart v-else />
     </div>
@@ -34,19 +19,21 @@
 <script>
 import { mapGetters } from 'vuex'
 import EmptyCart from '@/components/shopping_cart/EmptyCart.vue'
+import ShoppingCartData from '@/components/shopping_cart/ShoppingCartData.vue'
 
 export default {
   name: 'ShoppingCartModal',
   components: {
-    EmptyCart
+    EmptyCart,
+    ShoppingCartData
   },
   data () {
     return {
-      cartProducts: false
+      productsOnCart: this.productsOnCartLength()
     }
   },
   computed: mapGetters({
-    products: 'products/products'
+    count: 'shopping_cart/count'
   }),
   mounted () {
     document.body.classList.add('no-scroll')
@@ -57,6 +44,10 @@ export default {
   methods: {
     closeCart () {
       this.$store.commit('shopping_cart/setOpenCart')
+    },
+    productsOnCartLength () {
+      const cart = JSON.parse(localStorage.getItem('shopping_cart'))
+      return cart != null && cart.length > 0
     }
   }
 }

@@ -1,3 +1,4 @@
 export default () => ({
-  open: false
+  open: false,
+  count: 0
 })
